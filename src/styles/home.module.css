@@ -1,7 +1,6 @@
 .header {
-  display: flex;
-  align-items: center;
-  margin-left:20px;
+  margin-left:5px;
+  animation: fadein 3s;
 }
 @keyframes fadein {
   from { opacity: 0}
@@ -13,27 +12,21 @@
 }
 
 @keyframes slideInFromBottom {
-from { transform: translateY(20px); opacity: 0; }
+from { transform: translateY(20px); opacity: .5; }
 to { transform: translateY(0); opacity: 1; }
 }
 
-.header h2 {
-  font-size: 4em;
-  animation: fadein 3s;
-}
-
-.header h3 {
-  font-size: 3em;
-  font-weight: 400;
-  margin-bottom: 20px;
-  animation: fadein 3s;
-}
+@keyframes slideInFromBottom2 {
+  from { transform: translateY(20px); opacity: 1; }
+  to { transform: translateY(0); opacity: 1; }
+  }
 
 .btn {
   display: inline-block;
   background: radial-gradient(at top left, #23f5f9 0%, rgb(163, 241, 255) 100%);
   border-style: solid;
   border-color: black;
+  text-align: center;
   font-weight: bold;
   border-width: 2px;
   padding: 10px 16px;
@@ -70,21 +63,17 @@ to { transform: translateY(0); opacity: 1; }
 
 .skills{
   display: flex;
-  background: radial-gradient(at top left, #131313 0%, rgb(101, 101, 101) 100%);
+  background: radial-gradient(at top left, #b8b8b8 0%, rgb(101, 101, 101) 100%);
   border-style: solid;
   border-width: 2px;
   border-color: rgb(255, 255, 255);
   border-radius: 15;
-  color: white;
+  color: black;
   padding: 10px;
   flex-direction: column;
   order: 5;
 }
 
-.skills:hover{
-  border-color: rgb(0, 255, 85);
-  transition: linear .5s;
-}
 
 .titles{
   display: flex;
@@ -100,12 +89,7 @@ to { transform: translateY(0); opacity: 1; }
   align-self: auto;
   width: 100px;
   height: 25px;
-  color:white;
-}
-
-.title:hover{
-  color: rgb(0, 255, 85);
-  transition: linear .5s;
+  color:black;
 }
 
 .logos{
@@ -115,10 +99,21 @@ to { transform: translateY(0); opacity: 1; }
   align-items: center;
   justify-content: center;
   margin: 5px;
+  
 }
 .logo {
+  animation: slideInFromBottom 3s;
+  padding-top: 5px;
   width:100%;
   height:auto;
   max-width: 100px;
   align-self: auto;
+}
+
+.logo:hover {
+  animation: slideInFromBottom2 3s;
+}
+
+.applink:hover {
+  color: black;
 }

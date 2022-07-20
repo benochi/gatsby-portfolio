@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectCard from '../../components/ProjectCard'
+
 import Layout from '../../components/Layout'
 
 export default function Projects() {
@@ -13,8 +13,7 @@ export default function Projects() {
   return (
     <Layout>
       <div>
-        <ProjectCard/>
-        <ProjectCard/>
+        <h1>stuff</h1>
       </div>
     </Layout>
   )
