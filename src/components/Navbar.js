@@ -5,7 +5,6 @@ export default function
 () {
   return (
     <nav>
-      
       <div classname="links">
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>

@@ -8,13 +8,13 @@
   padding: 0;
   text-decoration: none;
   font-family: "Montserrat";
-  color: white;
+  color: #DFF6FF;
 }
 html, body {
   min-height: 100%;
 }
-body {
-  background: radial-gradient(at top left, #01d1d5 0%, rgb(90, 162, 249) 100%);
+body { 
+  background: radial-gradient(at top left, #06283D 0%, #1363DF 100%);
   background-repeat: no-repeat;
 }
 
@@ -27,12 +27,13 @@ nav {
   display: flex;
   align-items: center;
   margin: 20px auto;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid #DFF6FF;
 }
 nav .links {
   display: inline-block;
   text-align: right;
 }
+
 nav a {
   display: inline-block;
   margin-left: 20px;
@@ -43,6 +44,10 @@ nav a {
 nav a:hover {
   border-color: rgb(0, 0, 0);
   color: black;
+  border: 20px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: #DFF6FF;
   font-weight: bold;
   transition: .5s;
 }
