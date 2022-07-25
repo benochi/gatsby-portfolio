@@ -6,14 +6,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+      //try #1a2139 #333e5b #798190 #9d9683 #f73a18
       colors: {
-        'lb2': '#47B5FF',
-        'db1':'#06283D',
-        'db2': '#1363DF',
-        'lb1': '#DFF6FF'
+        'darkest': '#1a2139',
+        'darker': '#333e5b',
+        'lighter': ' #798190',        
+        'lightest': '#9d9683',
+        'textcol': '#9d9683',
+        'highlight': '#f73a18',
+        'rumble': '#AADB1E',
+        'discord': '#7289da',
+        'springboard': '#3ded97',
+        'amazon': '#FF9900'
       },
       
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }

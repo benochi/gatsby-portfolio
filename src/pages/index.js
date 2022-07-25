@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import * as styles from '../styles/home.module.css'
 import { Link } from 'gatsby'
-import headshot from '../images/headshot.jpg'
 
 import ajax from '../images/logos/ajax.svg'
 import aws from '../images/logos/aws.svg'
@@ -34,44 +33,16 @@ import recipepic from '../images/projects/recipeapp.jpg'
 export default function Home() {
   return (
     <Layout>
-      <section class="bg-lb2 border-2 mb-5 border-lb1 shadow-xl">
-        <div class="flex flex-col md:flex-row p-2 shadow-xl bg-gradient-to-t from-db2">
-          <div class="p-2 mx-auto bg-contain bg-no-repeat bg-center ">
-            <img class="items-center "src={headshot}></img>
-          </div>
-          <div class="flex shadow-xl content-center p-2 bg-color-red-500">
-            <p class="text-3xl">
-            Dan Politica<br></br>
-            Software Engineer
-            </p>
-            <div class="flex flex-col content-center ">
-              <div class="flex-auto">
-                <div class="flex flex-col">
-                  <Link to="mailto:benochi82@gmail.com" className={styles.btn}>Email me</Link>
-                  <Link to="tel:7202069074" className={styles.btn}>Call me</Link>
-                  <Link to="https://github.com/benochi" target="_blank" className={styles.btn}>Github</Link>
-                  <Link to="https://www.linkedin.com/in/dan-p-eop/" target="_blank" className={styles.btn}>LinkedIn</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-2 flex content-center  font-medium">
-            <p>Full stack Software Engineer with skills in JavaScript, Python, Node, PostgreSQL, MongoDB, and Redis.  16 years of background in law enforcement, with promotion to Sergeant in 2019.  
-              Dedicated to problem solving with a strong work ethic and drive to constantly improve.  Prior experience required a high attention to detail, collaborating with diverse teams, excellent verbal communication skills, organizational skills, and customer service.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="bg-lb2 border-2 mb-5 p-5 border-lb1 shadow-xl bg-gradient-to-t from-db2">
+      <section class="border-2 mb-5 p-5 border-lightest shadow-xl bg-darker">
         <div>
           <h2 class="text-3xl font-bold">Skills:</h2>
-          <div class="grid grid-cols-3 gap-1 shadow-lg p-5 lg:grid-cols-8 md:grid-cols-6 sm:grid-cols-4 xl:grid-cols-12">
+          <div class="grid grid-cols-3 gap-1 shadow-lg p-5 lg:grid-cols-8 md:grid-cols-6 sm:grid-cols-4 xl:grid-cols-12 bg-lighter">
             <div>
-              <h5 class="content-center text-center"><strong>Ajax</strong></h5>
+              <h5 class="content-center text-center text-textcol"><strong>Ajax</strong></h5>
               <img className={styles.logo} alt="Ajax Icon" src={ajax}></img>
             </div>
             <div>
-              <h5 class="content-center text-center"><strong>AWS</strong></h5>
+              <h5 class="content-center text-center font-bold">AWS</h5>
               <img className={styles.logo} alt="Amazon web services Icon" src={aws}></img>
             </div>
             <div>
@@ -157,72 +128,72 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section class="bg-lb2 border-2 mb-5 p-1 border-lb1 shadow-xl bg-gradient-to-t from-db2">
+      <section class=" border-2 mb-5 p-1 border-lightest shadow-xl bg-darker">
         <h1 class="text-3xl font-bold p-5">PROJECTS:</h1>
-        <div class="grid grid-cols-1 gap-1 p-5 lg:grid-cols-1 xl:grid-cols-1 bg-gradient-to-t from-db2">
-          <div class="grid-cols p-5 shadow-xl">
+        <div class="grid grid-cols-1 gap-1 p-5 lg:grid-cols-1 xl:grid-cols-1 ">
+          <div class="grid-cols p-5 shadow-xl bg-lighter">
             <h1 class="content-center text-2xl font-bold">
               <Link className={styles.applink} target="_blank" to="http://reguru.herokuapp.com/">Go to REGURU - testuser/test1234</Link>
             </h1>
-            <div class=" shadow-xl content-center text-center">
-              <img src={regurupic} alt="Reguru application picture" class="mt-2 object-cover h-480 w-960 border-2 border-lb1"></img>
+            <div class="shadow-xl content-center text-center">
+              <img src={regurupic} alt="Reguru application" class="mt-2 object-cover h-480 w-960 border-2 border-lightest"></img>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2 border-2 mt-1 border-lb1">
-              <h4 class="text-3xl font-bold p-2 p-2">Description:</h4>
-              <p class="pl-2 pr-2 pb-2">
+            <div class="grid-cols-1 bg-darkest p-2 border-2 shadow-xl mt-1 border-lightest">
+              <h4 class="text-3xl font-bold">Description:</h4>
+              <p class="pt-2">
                 Reguru is a real estate application to help manage and source properties for investment purposes.  Reguru allows
                 users to search for properties based on several query parameters with validation built in.  From these results a 
-                user can add a property to a liked or managed column, or both.  Users can then calculate expenses from their managed properties
+                user can add a property to a liked or managed column, or both.  <p><br></br>Users can then calculate expenses from their managed properties
                 to see what net income could be expected by purchasing a property or from their curently managed properties. The frontend, backend
                 and API were all built by myself and are hosted on heroku via Github. The database contains all real properties that were all
-                obtained using a custom script and Octoparse.
+                obtained using a custom script and Octoparse.</p>
               </p>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2 border-2 border-lb1 mt-1">
-              <h4 class="text-3xl font-bold pb-2 pl-2">Frontend - built by Dan</h4>
-              <p class="pl-2"><strong>Technologies:</strong> React, JavaScript, HTML, CSS, React-Strap, Axios, Formik, Yup, JWT, graphJS</p>
-              <p class="pl-2">Handles user Registration/Login calls to backend and graphJS call on dashboard.</p>
+            <div class="grid-cols-1 bg-darkest p-2 border-2 shadow-xl border-lightest mt-1">
+              <h4 class="text-3xl font-bold">Frontend - built by Dan</h4>
+              <p class="pt-2"><strong>Technologies:</strong> React, JavaScript, HTML, CSS, React-Strap, Axios, Formik, Yup, JWT, graphJS</p>
+              <p class="pt-2">Handles user Registration/Login calls to backend and graphJS call on dashboard.</p>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2 border-2 border-lb1 mt-1">
-              <h4 class="text-3xl font-bold pb-2 pl-2">Backend - built by Dan</h4>
-              <p class="pl-2"><strong>Technologies:</strong> NodeJS, Express, MongoDB, Mongoose, MongoDB Atlas, Hapi/joi, Axios, Bcrypt, Cors, Dotenv, Passport, JWT</p>
-              <p class="pl-2">Handles user Registration/Login and user database as well as API calls for properties.</p>
+            <div class="grid-cols-1 bg-darkest p-2 border-2 shadow-xl border-lightest mt-1">
+              <h4 class="text-3xl font-bold">Backend - built by Dan</h4>
+              <p class="pt-2"><strong>Technologies:</strong> NodeJS, Express, MongoDB, Mongoose, MongoDB Atlas, Hapi/joi, Axios, Bcrypt, Cors, Dotenv, Passport, JWT</p>
+              <p class="pt-2">Handles user Registration/Login and user database as well as API calls for properties.</p>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2  border-2 border-lb1 mt-1">
-              <h4 class="text-3xl font-bold pb-2 pl-2">API - built by Dan</h4>
-              <p class="pl-2"><strong>Technologies:</strong> NodeJS, Express, MongoDB, Mongoose, MongoDB Atlas, body-parser</p>
-              <p class="pl-2">Handles API response for property data to backend and property database </p>
+            <div class="grid-cols-1 bg-darkest p-2 border-2 shadow-xl border-lightest mt-1">
+              <h4 class="text-3xl font-bold">API - built by Dan</h4>
+              <p class="pt-2"><strong>Technologies:</strong> NodeJS, Express, MongoDB, Mongoose, MongoDB Atlas, body-parser</p>
+              <p class="pt-2">Handles API response for property data to backend and property database </p>
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-1 gap-1 p-5 lg:grid-cols-1 xl:grid-cols-1 bg-gradient-to-t from-db2">
-          <div class="grid-cols p-5 shadow-xl">
+        <div class="grid grid-cols-1 gap-1 p-5 lg:grid-cols-1 xl:grid-cols-1 bg-gradient-to-t from-darker">
+          <div class="grid-cols p-5 shadow-xl bg-lighter">
             <h1 class="content-center text-2xl font-bold">
               <Link className={styles.applink} target="_blank" to="http://recipelookup.herokuapp.com/">Go to Recipe Lookup - test-user/test1234</Link>
             </h1>
             <div class=" shadow-xl content-center text-center">
-              <img src={recipepic} alt="Recipe application picture" class="mt-2 object-cover h-480 w-960 border-2 border-lb1"></img>
+              <img src={recipepic} alt="Recipe application" class="mt-2 object-cover h-480 w-960 border-2 border-lightest"></img>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2  border-2 border-lb1 mt-1">
-              <h4 class="text-3xl font-bold pb-2 pl-2">Description:</h4>
-              <p class="pl-2 pr-2 pb-2">
+            <div class="grid-cols-1 bg-darkest p-2 shadow-xl border-2 border-lightest mt-1">
+              <h4 class="text-3xl font-bold">Description:</h4>
+              <p class="pt-2">
                 Recipe lookup is an application for finding what you can make out of specific ingredients.  This application was built because I enjoy cooking 
                 and don't like wasting leftovers.  The application uses the Edamam API to find matching recipes, a quick ingredient list and cooking instructions.
               </p>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2  border-2 border-lb1 mt-1">
-              <h4 class="text-3xl font-bold pb-2 pl-2">Frontend - built by Dan</h4>
-              <p class="pl-2"><strong>Technologies:</strong> JavaScript, jQuery, HTML, CSS</p>
-              <p class="pl-2">Handles user Registration/Login calls to backend and recipe ingredients.</p>
+            <div class="grid-cols-1 bg-darkest p-2 shadow-xl border-2 border-lightest mt-1">
+              <h4 class="text-3xl font-bold">Frontend - built by Dan</h4>
+              <p class="pt-2"><strong>Technologies:</strong> JavaScript, jQuery, HTML, CSS</p>
+              <p class="pt-2">Handles user Registration/Login calls to backend and recipe ingredients.</p>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2  border-2 border-lb1 mt-1">
-              <h4 class="text-3xl font-bold pb-2 pl-2">Backend - built by Dan</h4>
-              <p class="pl-2"><strong>Technologies:</strong> Python, Flask, SQLAlchemy, PostgreSQL</p>
-              <p class="pl-2">Handles user Registration/Login and user database as well as API calls for properties.</p>
+            <div class="grid-cols-1 bg-darkest p-2 shadow-xl border-2 border-lightest mt-1">
+              <h4 class="text-3xl font-bold">Backend - built by Dan</h4>
+              <p class="pt-2"><strong>Technologies:</strong> Python, Flask, SQLAlchemy, PostgreSQL</p>
+              <p class="pt-2">Handles user Registration/Login and user database as well as API calls for properties.</p>
             </div>
-            <div class="grid-cols-1 bg-lb2 bg-gradient-to-t from-db2  border-2 border-lb1 mt-1">
-              <h4 class="text-3xl font-bold pb-2 pl-2">API - Edamam</h4>
-              <p class="pl-2">Handles API response for matching recipes based on ingredient query.</p>
+            <div class="grid-cols-1 bg-darkest p-2 shadow-xl border-2 border-lightest mt-1">
+              <h4 class="text-3xl font-bold">API - Edamam</h4>
+              <p class="pt-2">Handles API response for matching recipes based on ingredient query.</p>
             </div>
           </div>
         </div>

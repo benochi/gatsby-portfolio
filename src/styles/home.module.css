@@ -23,7 +23,7 @@ to { transform: translateY(0); opacity: 1; }
 
 .btn {
   display: inline-block;
-  background: radial-gradient(at top left, #47B5FF 0%, rgb(163, 241, 255) 100%);
+  background: radial-gradient(at top left, #798190 0%, #9d9683 100%);
   border-style: solid;
   border-color: #06283D;
   text-align: center;
@@ -32,13 +32,14 @@ to { transform: translateY(0); opacity: 1; }
   padding: 10px 16px;
   border-radius: 15px;
   margin-right: 5px;
+  margin-bottom:2px;
   color:black;
   animation: fadein 3s;
 }
 .btn:hover {
   border-color: rgb(255, 255, 255);
   color:#DFF6FF;
-  background: radial-gradient(at top left, #1363DF 0%, #06283D 100%);
+  background: radial-gradient(at top left, #333e5b 0%, #1a2139 100%);
   transition: linear .5s;
 }
 
